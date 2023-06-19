@@ -29,14 +29,19 @@ def listarcadeiras():
 
 def posicaocadeira():
     listaAtamanhos = []
-    for i in range (len(listaA)):
+    for i in range(len(listaA)):
         tamanho = len(listaA[i])
-        listaAtamanhos.insert(i, tamanho)
-        listaAtamanhos.sort(reverse=True)
+        listaAtamanhos.append(tamanho)
+    sort_index = []
+    for x in listaAtamanhos:
+        sort_index.append(x)
+    sort_index.sort(reverse=True)
     cadeira = input("Digite o nome da cadeira que você quer saber:")
     cadeira_maiusc = cadeira.upper()
-    posicao_original = listaA.index(cadeira_maiusc)
-    print(f"""A cadeira de {cadeira} é a {listaAtamanhos.index(listaAtamanhos[posicao_original])+1}ª com maior número de caracteres.""")
+    posicao0 = listaA.index(cadeira_maiusc)
+    posicao1 = listaAtamanhos[posicao0]
+    posicao_final = sort_index.index(posicao1)
+    print(f"""A cadeira de {cadeira} é a {posicao_final+1}ª com maior número de caracteres.""")
     
 def inserenumeros():
     for i in range (10):
@@ -61,4 +66,4 @@ while True:
     elif opcao == 3:
         posicaocadeira()
     elif opcao == 4:
-        inserenumeros()     
+        inserenumeros()    
