@@ -6,4 +6,20 @@ class Tarefa:
         self.__criacao = criacao
         self.__conclusao = conclusao
         
-    def criar_tarefa()
+    def atualizar_descricao(self, descricao):    
+        self.__descricao = descricao
+        
+    def iniciar_tarefa(self):
+        self.__status = "Em andamento"
+        
+    def concluir_tarefa(self):
+        self.__status = "Concluída"
+    
+class Usuario:
+    def __init__(self, nome, email):
+        self.__nome = nome
+        self.__email = email
+        self.__tarefas = []
+        self.adm = None
+        
+    def 
