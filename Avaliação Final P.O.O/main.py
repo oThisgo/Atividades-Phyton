@@ -1,7 +1,9 @@
-from classes import *
 
-def acessar():
-    
+p = Projeto()
+#dicionario e criacao de JSON
+d = {10 : "Projeto 1", 20 : "Projeto 2", 30 : "Projeto 3"}
+with open("nda.json", "n") as arq:
+    json.dump(d, arq)
 
 menu = """
 =========================================
